@@ -13,6 +13,10 @@ class TextDirection extends StatelessWidget {
       //debugShowCheckerBanner: false,
       title: "Text_Direction",
       home: Scaffold(
+        appBar: AppBar(
+          title: Text("App Bar"),
+          backgroundColor: Colors.teal,
+        ),
         body: Center(
           child: Text("Hello world"),
         ),
