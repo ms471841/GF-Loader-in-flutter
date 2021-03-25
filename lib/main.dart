@@ -1,45 +1,28 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(TextDirection());
+  runApp(MyApp());
 }
 
-class TextDirection extends StatelessWidget {
-  const TextDirection({Key key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //debugShowCheckerBanner: false,
-      theme: ThemeData.light(),
-
-      title: "gradient color background",
+      title: "images",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("App Bar"),
-          leading: Icon(
-            (Icons.home),
-          ),
-          actions: [
-            Icon(Icons.access_alarm),
-          ],
-          backgroundColor: Colors.red,
+          centerTitle: true,
+          title: Text("Images"),
         ),
-        body: Container(
-          width: double.infinity,
-          height: double.infinity,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [
-                  Colors.deepPurple[700],
-                  Colors.purple[500],
-                ],
-                begin: FractionalOffset(0.5, 0.0),
-                end: FractionalOffset(0.0, 0.5),
-                stops: [0.0, 1.0],
-                tileMode: TileMode.repeated),
+        body: Center(
+          child: Image.asset(
+            "assets/images/krishna.jpg",
+            fit: BoxFit.fill,
+            height: double.infinity,
+            width: double.infinity,
           ),
-          child: Text("Hello world!!"),
         ),
       ),
     );
