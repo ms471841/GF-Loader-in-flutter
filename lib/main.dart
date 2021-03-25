@@ -11,6 +11,7 @@ class TextDirection extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //debugShowCheckerBanner: false,
+      theme: ThemeData.dark(),
       title: "Text_Direction",
       home: Scaffold(
         appBar: AppBar(
