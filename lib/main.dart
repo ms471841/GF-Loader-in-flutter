@@ -11,7 +11,7 @@ class TextDirection extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //debugShowCheckerBanner: false,
-      //theme: ThemeData.dark(),
+      theme: ThemeData.light(),
 
       title: "gradient color background",
       home: Scaffold(
@@ -23,6 +23,7 @@ class TextDirection extends StatelessWidget {
           actions: [
             Icon(Icons.access_alarm),
           ],
+          backgroundColor: Colors.red,
         ),
         body: Container(
           width: double.infinity,
