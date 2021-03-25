@@ -11,7 +11,7 @@ class TextDirection extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //debugShowCheckerBanner: false,
-      theme: ThemeData.dark(),
+      //theme: ThemeData.dark(),
       title: "Text_Direction",
       home: Scaffold(
         appBar: AppBar(
@@ -22,10 +22,13 @@ class TextDirection extends StatelessWidget {
           actions: [
             Icon(Icons.access_alarm),
           ],
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.blue,
         ),
-        body: Center(
-          child: Text("Hello world"),
+        body: Container(
+          color: Colors.yellow,
+          width: double.infinity,
+          height: double.infinity,
+          child: Text("Hello world!!"),
         ),
       ),
     );
