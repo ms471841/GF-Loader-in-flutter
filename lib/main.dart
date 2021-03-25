@@ -16,6 +16,12 @@ class TextDirection extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text("App Bar"),
+          leading: Icon(
+            (Icons.home),
+          ),
+          actions: [
+            Icon(Icons.access_alarm),
+          ],
           backgroundColor: Colors.teal,
         ),
         body: Center(
