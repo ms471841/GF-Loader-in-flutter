@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+//import 'package:toast/toast.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,15 +15,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -31,51 +24,17 @@ class _MyAppState extends State<MyApp> {
           title: Text("Network image"),
         ),
         body: Center(
-            child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  child: Text("Click me"),
-                  clipBehavior: Clip.hardEdge,
-                  autofocus: true,
-                ),
-                Text("<--Text Button"),
-              ],
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text("Click me"),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  icon: Icon(Icons.ac_unit_outlined),
-                  onPressed: () {},
-                  color: Colors.red,
-                  disabledColor: Colors.teal,
-                ),
-                Text("<--Icon Button")
-              ],
-            ),
-            IconButton(
-              icon: Icon(Icons.ac_unit_outlined),
-              onPressed: () {},
-              color: Colors.red,
-              disabledColor: Colors.teal,
-            ),
-            IconButton(
-              icon: Icon(Icons.cake),
-              onPressed: () {},
-              color: Colors.red,
-              disabledColor: Colors.teal,
-            ),
-          ],
-        )),
+          child: TextButton(
+              child: Text("click me"),
+              onPressed: () {
+                showToast();
+              }),
+        ),
       ),
     );
+  }
+
+  showToast() {
+    Fluttertoast.showToast(msg: "TOP taost");
   }
 }
