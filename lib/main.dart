@@ -1,22 +1,40 @@
 import 'package:flutter/material.dart';
+//import 'package:toast/toast.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
-  runApp(TextDirection());
+  runApp(MyApp());
 }
 
-class TextDirection extends StatelessWidget {
-  const TextDirection({Key key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  MyApp({Key key}) : super(key: key);
 
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //debugShowCheckerBanner: false,
-      title: "Text_Direction",
+      debugShowCheckedModeBanner: false,
+      title: "network image",
       home: Scaffold(
+        appBar: AppBar(
+          title: Text("Network image"),
+        ),
         body: Center(
-          child: Text("Hello world"),
+          child: TextButton(
+              child: Text("click me"),
+              onPressed: () {
+                showToast();
+              }),
         ),
       ),
     );
+  }
+
+  showToast() {
+    Fluttertoast.showToast(msg: "TOP taost");
   }
 }
